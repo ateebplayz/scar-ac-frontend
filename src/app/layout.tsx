@@ -1,15 +1,52 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const switzer = localFont({
+  src: [
+    {
+      path: "../../assets/fonts/Switzer/Switzer-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Switzer/Switzer-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Switzer/Switzer-Semibold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Switzer/Switzer-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Switzer/Switzer-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Switzer/Switzer-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Switzer/Switzer-Extralight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../../assets/fonts/Switzer/Switzer-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+  ],
+  variable: "--font-switzer",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${switzer.variable} bg-background antialiased`}
       >
         {children}
       </body>
