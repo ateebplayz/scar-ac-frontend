@@ -9,7 +9,6 @@ import {LuAward, LuDiamond, LuEarth, LuPaintbrush} from "react-icons/lu";
 import {CgMusicNote} from "react-icons/cg";
 import {GiSettingsKnobs} from "react-icons/gi";
 import {IoBarChartOutline, IoDiamondOutline} from "react-icons/io5";
-import Image from "next/image";
 import {TbTargetArrow} from "react-icons/tb";
 import {FaDotCircle} from "react-icons/fa";
 import {GoDotFill} from "react-icons/go";
@@ -182,7 +181,7 @@ export default function Home() {
           {
             Array.from({length: 12}, (_, index) => (
               <div className={''} key={index}>
-                <Image src={`/icons/socials/Service-${index}.png`} alt={`Icon ${index}`} width={72} height={72}/>
+                <img src={`/icons/socials/Service-${index}.png`} alt={`Icon ${index}`} width={72} height={72}/>
               </div>
             ))
           }
@@ -320,8 +319,7 @@ export default function Home() {
           {
             Array.from({length: 12}, (_, index) => (
               <div className={''} key={index}>
-                <Image src={`/icons/badges/Service-${index}.png`} alt={`Icon ${index}`} className={'w-[72px] h-[72px]'}
-                       width={128} height={128}/>
+                <img src={`/icons/badges/Service-${index}.png`} alt={`Icon ${index}`} className={'w-[72px] h-[72px]'} width={128} height={128}/>
               </div>
             ))
           }
@@ -483,7 +481,7 @@ function CreatorCard({img, name, views}: { img: string; name: string; views: str
   return (
     <Card className="p-4 flex flex-row min-w-fit items-center border border-border rounded-xl">
       <CardContent className={'flex flex-row p-0 justify-center items-center gap-4'}>
-        <Image src={`/icons${img}`} alt={name} width={48} height={48} className="rounded-full w-[48px] h-[48px]"/>
+        <img src={`/icons${img}`} alt={name} width={48} height={48} className="rounded-full w-[48px] h-[48px]"/>
         <h1 className="text-white text-lg font-medium">{name}</h1>
         <p className="text-sm text-primary-foreground"><span className={'text-white'}>{views}</span> Views</p>
       </CardContent>
