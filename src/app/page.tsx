@@ -479,7 +479,7 @@ const creators = [
   {name: "Bijak Kumar", views: "110K+", img: "/avatars/Ellipse 73-11.png"},
 ];
 
-function CreatorCard({img, name, views}: { img: stirng; name: string; views: string }) {
+function CreatorCard({img, name, views}: { img: string; name: string; views: string }) {
   return (
     <Card className="p-4 flex flex-row min-w-fit items-center border border-border rounded-xl">
       <CardContent className={'flex flex-row p-0 justify-center items-center gap-4'}>
