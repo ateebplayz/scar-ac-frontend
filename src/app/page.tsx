@@ -12,25 +12,16 @@ import {IoBarChartOutline, IoDiamondOutline} from "react-icons/io5";
 import {TbTargetArrow} from "react-icons/tb";
 import {FaDotCircle} from "react-icons/fa";
 import {GoDotFill} from "react-icons/go";
+import {CiDesktopMouse2} from "react-icons/ci";
 
 export default function Home() {
   return (
     <div className="">
       <img
-        className="absolute w-[1307.39px] h-[1307.39px] left-[-114.05px] top-[18.61px] z-10"
+        className="absolute w-[1307.39px] h-[1307.39px] left-[-114.05px] pointer-events-none top-[18.61px] z-10"
         src={"/orbs/Red_Orb_1.png"}
       />
-      <div className={'grid grid-cols-3 absolute top-0 w-full py-12 z-30'}>
-        <div className={'flex justify-center items-center'}/>
-        <div className={'flex justify-center items-center'}>
-          <Card className={'p-0 gap-0 rounded-full text-sm px-2 py-1'}>
-            <CardContent className={'p-2 gap-8 font-medium flex flex-row'}>
-              <h1 className={'transition duration-500 hover:opacity-50 cursor-pointer'}>Features</h1>
-              <h1 className={'transition duration-500 hover:opacity-50 cursor-pointer'}>Our community</h1>
-              <h1 className={'transition duration-500 hover:opacity-50 cursor-pointer'}>Pricing</h1>
-            </CardContent>
-          </Card>
-        </div>
+      <div className={'flex justify-end items-center px-32 absolute top-0 w-full py-12 z-30'}>
         <div className={'flex justify-center h-full items-center'}>
           <Button variant={'ghost'} className={'rounded-full mr-2'}>
             Sign in
@@ -52,7 +43,7 @@ export default function Home() {
             Trusted by creators worldwide
           </span>
         </div>
-        <h1 className={"text-5xl font-medium z-30"}>
+        <h1 className={"text-5xl font-medium mt-4 z-30"}>
           Create Your <span className={"text-primary"}>All-in-One</span> Bio Link
         </h1>
         <h1 className={"mt-4 w-1/3 text-xl text-center text-primary-foreground z-30"}>
@@ -60,7 +51,7 @@ export default function Home() {
           shareable page.
         </h1>
 
-        <div className="flex flex-row py-4 justify-center items-stretch z-30">
+        <div className="flex flex-row py-4 mt-8 justify-center items-stretch z-30">
           <div className="relative">
             <Input
               className="rounded-r-none w-64 pl-16 text-primary-foreground"
@@ -73,7 +64,7 @@ export default function Home() {
           <Button className="rounded-l-none h-10">Create my link</Button>
         </div>
 
-        <div className={'flex justify-center items-center z-30 flex-row gap-12 mt-2'}>
+        <div className={'flex justify-center items-center z-30 flex-row gap-12 mt-8'}>
           <h1 className={'font-medium text-muted'}>
             <span className={'text-white mr-1'}>27K+</span>
             Active users
@@ -90,6 +81,11 @@ export default function Home() {
             <span className={'text-white mr-1'}>150+</span>
             Integrations available
           </h1>
+        </div>
+
+        <div className={'flex animate-up-down z-30 justify-center absolute bottom-12 items-center flex-col'}>
+          <CiDesktopMouse2 size={32} className={'text-primary'}/>
+          <h1 className={'mt-2 text-xs'}>Scroll Down</h1>
         </div>
       </div>
 
@@ -143,15 +139,16 @@ export default function Home() {
               },
             ].map((item, index) => (
               <div
-                className={'w-[30%] flex flex-col justify-start items-start p-8 border border-border gap-4 rounded-xl'}
+                className={'w-[20%] flex flex-col justify-start items-start p-8 border border-border gap-4 rounded-xl transition duration-500 hover:border-primary'}
                 key={index}>
                 <div className={'flex flex-row justify-start items-center w-full'}>
                   <div className={'flex justify-center items-center p-3 bg-border rounded-xl'}>
-                    <item.icon className={'text-primary'} size={36}/>
+                    <item.icon className={'text-primary'} size={24}/>
                   </div>
-                  <h1 className={'text-white font-medium text-2xl ml-4'}>{item.heading}</h1>
+                  <h1 className={'text-white font-medium text-xl ml-4'}>{item.heading}</h1>
                 </div>
-                <h1 className={'font-medium text-lg text-primary-foreground'}>{item.desc}</h1>
+                <h1 className={'font-medium' +
+                  ' text-primary-foreground'}>{item.desc}</h1>
               </div>
             ))
           }
@@ -438,7 +435,7 @@ export default function Home() {
             <Card className={'p-0 gap-0'}>
               <CardContent className={'p-2 gap-2 flex flex-row justify-center items-center'}>
                 <div className={'bg-green-300 rounded-full h-2 w-2 border border-4 border-green-900/50 animate-pulse p-1'}/>
-                <h1 className={'font-medium'}>Online</h1>
+                <h1 className={'font-medium'}>Service Status</h1>
               </CardContent>
             </Card>
           </div>
