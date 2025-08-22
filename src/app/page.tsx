@@ -10,18 +10,16 @@ import {CgMusicNote} from "react-icons/cg";
 import {GiSettingsKnobs} from "react-icons/gi";
 import {IoBarChartOutline, IoDiamondOutline} from "react-icons/io5";
 import {TbTargetArrow} from "react-icons/tb";
-import {FaDotCircle} from "react-icons/fa";
 import {GoDotFill} from "react-icons/go";
 import {CiDesktopMouse2} from "react-icons/ci";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger
 } from "@/components/ui/dialog";
-import {DialogBody} from "next/dist/next-devtools/dev-overlay/components/dialog";
+import {Header} from "@/components/items/header";
 
 export default function Home() {
   return (
@@ -30,18 +28,7 @@ export default function Home() {
         className="absolute w-[1307.39px] h-[1307.39px] left-[-114.05px] pointer-events-none top-[18.61px] z-10"
         src={"/orbs/Red_Orb_1.png"}
       />
-      <div className={'flex justify-end items-center px-32 absolute top-0 w-full py-12 z-30'}>
-        <div className={'flex justify-center h-full items-center'}>
-          <Button variant={'ghost'} className={'rounded-full mr-2'}>
-            Sign in
-          </Button>
-          <button className="gradient-border transition duration-500 hover:opacity-50 cursor-pointer">
-            <span className="gradient-content text-sm">
-              Sign up
-            </span>
-          </button>
-        </div>
-      </div>
+      <Header/>
 
       {/* Hero Section */}
       <div
