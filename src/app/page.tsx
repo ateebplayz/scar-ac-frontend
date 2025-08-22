@@ -13,6 +13,15 @@ import {TbTargetArrow} from "react-icons/tb";
 import {FaDotCircle} from "react-icons/fa";
 import {GoDotFill} from "react-icons/go";
 import {CiDesktopMouse2} from "react-icons/ci";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from "@/components/ui/dialog";
+import {DialogBody} from "next/dist/next-devtools/dev-overlay/components/dialog";
 
 export default function Home() {
   return (
@@ -83,7 +92,7 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className={'flex animate-up-down z-30 justify-center absolute bottom-12 items-center flex-col'}>
+        <div className={'flex animate-up-down z-30 justify-center mt-12 items-center flex-col'}>
           <CiDesktopMouse2 size={32} className={'text-primary'}/>
           <h1 className={'mt-2 text-xs'}>Scroll Down</h1>
         </div>
@@ -104,7 +113,7 @@ export default function Home() {
           Everything you need to design, share, and grow your online presence.
         </h1>
 
-        <div className={'w-full flex flex-wrap justify-center items-center mt-8 gap-6'}>
+        <div className={'w-full flex flex-wrap justify-center items-stretch mt-8 gap-6'}>
           {
             [
               {
@@ -432,12 +441,34 @@ export default function Home() {
         <div className={'flex flex-col justify-start items-start gap-2'}>
           <div className={'flex flex-row justify-start items-start gap-2'}>
             <h1 className={'text-3xl font-medium'}>Scar.ac</h1>
-            <Card className={'p-0 gap-0'}>
-              <CardContent className={'p-2 gap-2 flex flex-row justify-center items-center'}>
-                <div className={'bg-green-300 rounded-full h-2 w-2 border border-4 border-green-900/50 animate-pulse p-1'}/>
-                <h1 className={'font-medium'}>Service Status</h1>
-              </CardContent>
-            </Card>
+            <Dialog>
+              <DialogTrigger>
+                <Card className={'p-0 gap-0'}>
+                  <CardContent className={'p-2 gap-2 flex flex-row justify-center items-center'}>
+                    <div className={'bg-green-300 rounded-full h-2 w-2 border border-4 border-green-900/50 animate-pulse p-1'}/>
+                    <h1 className={'font-medium'}>Service Status</h1>
+                  </CardContent>
+                </Card>
+              </DialogTrigger>
+              <DialogContent className={'flex flex-col justify-center items-center'}>
+                <DialogHeader>
+                  <DialogTitle className={'mt-4'}>
+                    <div className="gradient-border-d w-full cursor-pointer">
+                      <div className="gradient-content-d flex-col font-medium p-4 w-full text-sm">
+                        <h1 className={'text-xl'}>Scar.ac services status</h1>
+                        <h1 className={'text-primary-foreground text-sm text-center'}>Real-time updates on the availability and performance of scar.ac services.</h1>
+                      </div>
+                    </div>
+                  </DialogTitle>
+                </DialogHeader>
+                <Card className={'p-0 gap-0 w-fit px-4 rounded'}>
+                  <CardContent className={'p-2 gap-2 w-fit flex flex-row justify-center items-center'}>
+                    <div className={'bg-green-300 rounded-full h-2 w-2 border border-4 border-green-900/50 animate-pulse p-1'}/>
+                    <h1 className={'font-medium text-sm'}>All Systems Operational</h1>
+                  </CardContent>
+                </Card>
+              </DialogContent>
+            </Dialog>
           </div>
           <p className={'text-primary-foreground'}>Create a stunning digital identity that truly represents you.</p>
         </div>
